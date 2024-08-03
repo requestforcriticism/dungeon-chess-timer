@@ -1,0 +1,39 @@
+html,
+body {
+	width: 100vw;
+	height: 100vh;
+}
+
+.page {
+	width: 100vw;
+	height: 100vh;
+	float: left;
+}
+
+.btn-shot-clock{
+	position: absolute; left: 50%; transform: translate(-50%, -50%); top: 50%;
+}
+
+.btn-home {
+	width: 50%;
+	font-size: large;
+	margin-bottom: 30px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.player-text {
+	-moz-transform: scale(-1, -1);
+	-webkit-transform: scale(-1, -1);
+	-o-transform: scale(-1, -1);
+	-ms-transform: scale(-1, -1);
+	transform: scale(-1, -1);
+}
+
+.timer-players{
+	width: 100vw; height: 50vh; float: left; background-color: rgb(0, 51, 68); color: white;
+}
+
+.timer-monsters{
+	width: 100vw; height: 50vh; float: left; background-color: rgb(65, 0, 0); color: white;
+}

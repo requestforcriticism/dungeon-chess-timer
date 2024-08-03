@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bootstrap demo</title>
+	<link href="lib/bootstrap/bootstrap.min.css" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+	<div id="home" class="page text-center">
+		<h1>Dungeon Chess Timer</h1>
+		<div class="row">
+			<div class="col">
+				<p>Players<br/><span data-clock="players">00:00:00.000</span></p>
+			</div>
+			<div class="col">
+				<p>Monsters<br/><span data-clock="monsters">00:00:00.000</span></p>
+			</div>
+		</div>
+		<p><button class="btn btn-primary btn-home" data-nav="#roll-floor">Roll Floor</button></p>
+		<p><button class="btn btn-warning btn-home" data-nav="#timer" data-team="players">Start Player</button></p>
+		<p><button class="btn btn-warning btn-home" data-nav="#timer" data-team="monsters">Start Monsters</button></p>
+		<p><button class="btn btn-danger btn-home" data-nav="#reset">Reset</button></p>
+	</div>
+
+	<div id="roll-floor" class="page text-center d-none">
+		<h1>Roller display</h1>
+		<p><button class="btn btn-primary btn-home" data-nav="#home">Home</button></p>
+	</div>
+
+	<div id="timer" class="page text-center d-none">
+		<!-- <h1>Timer display</h1>
+		<p><button class="btn btn-primary btn-home" data-nav="#home">Home</button></p> -->
+		<button class="btn btn-warning btn-home btn-shot-clock" data-team="pause" data-nav="#home">
+			<span class="shot-clock">Home</span><br/>
+			<!-- <span class="shot-clock">Home</span> -->
+
+		</button>
+		<div data-team="monsters" class="d-flex align-items-center justify-content-center timer-players">
+			<h1 class="player-text">Players <br/> <span data-clock="players">00:00:00.000</span></h1>
+		</div>
+		<div data-team="players" class="d-flex align-items-center justify-content-center timer-monsters">
+			<h1>Monsters <br/> <span data-clock="monsters">00:00:00.000</span></h1>
+		</div>
+	</div>
+
+	<div id="reset" class="page text-center d-none">
+		<h1>Reset display</h1>
+		<p><button class="btn btn-primary btn-home" data-nav="#home">Home</button></p>
+	</div>
+
+	<script src="lib/jquery-3.7.1.min.js"></script>
+	<script src="lib/bootstrap/bootstrap.bundle.min.js"></script>
+	<script src="app.js"></script>
+</body>
+
+</html>
